@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="avi.stanford.kmoney.flashcardz.FlashcardsActivity">
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".FlashcardsActivity" tools:layout_editor_absoluteY="0dp" tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="29dp"
+                android:id="@+id/flashcardname_label" android:text="Name of flashcards"
+                android:textColor="@android:color/black" android:textSize="25sp"
+                android:layout_marginStart="15dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/title_label"
+                android:textStyle="bold|italic"/>
+        <TextView
+                android:text="Study CardZ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/title_label" android:textSize="50sp"
+                android:textStyle="bold|italic" android:textAllCaps="false"
+                android:textColor="@android:color/background_dark" android:typeface="normal"
+                app:fontFamily="casual"
+                android:layout_marginTop="10dp" app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"/>
+    <Button
+            android:text="Word"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/flashcard_button"
+            app:layout_constraintTop_toBottomOf="@+id/flashcardname_label"
+            android:background="@android:color/black"
+            android:textColor="@android:color/white" android:textSize="25sp"
+            android:onClick="cardClick" android:textAllCaps="false"
+            android:layout_marginBottom="10dp" app:layout_constraintBottom_toTopOf="@+id/mainmenu_button"
+            android:layout_marginTop="10dp" android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/right_button" android:layout_marginRight="20dp"
+            app:layout_constraintStart_toEndOf="@+id/left_button" android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"/>
+        <Button
+                android:text="right"
+                android:layout_width="wrap_content"
+                android:id="@+id/right_button" android:onClick="rightCard" app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="18sp"
+                android:textColor="@android:color/white" android:background="@android:color/black"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp" app:layout_constraintTop_toBottomOf="@+id/cardnumber_label"
+                android:layout_marginBottom="10dp" app:layout_constraintBottom_toTopOf="@+id/takequiz_button"
+                android:layout_marginEnd="10dp" android:layout_marginRight="10dp"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:id="@+id/left_button" app:layout_constraintStart_toStartOf="parent"
+                android:onClick="leftCard"
+                android:text="Left"
+                android:background="@android:color/black" android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/shufflecards_button"
+                android:layout_marginLeft="10dp" android:layout_marginStart="10dp" android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/flashcardname_label" android:layout_marginBottom="10dp"
+        />
+        <TextView
+                android:text="1 of 1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cardnumber_label"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/flashcard_button"
+                android:textSize="18sp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/title_label"/>
+        <Button
+                android:text="Main Menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mainmenu_button" android:textAllCaps="false"
+                android:textSize="18sp" android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/takequiz_button" android:layout_marginRight="8dp"
+                android:textStyle="italic" android:onClick="mainMenu"
+                app:layout_constraintStart_toEndOf="@+id/shufflecards_button" android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"/>
+        <Button
+                android:text="Shuffle Cards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/shufflecards_button" android:textAllCaps="false"
+                android:textSize="18sp" android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textStyle="italic" android:onClick="shuffleCards"
+                android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp"/>
+        <Button
+                android:text="Take Quiz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/takequiz_button" android:textAllCaps="false" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent" android:textStyle="italic" android:textSize="18sp"
+                android:onClick="takeQuiz"/>
+</android.support.constraint.ConstraintLayout>
